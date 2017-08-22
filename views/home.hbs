@@ -9,14 +9,14 @@
 <body>
     {{> header}}
     <p>{{{welcomeMessage}}}</p>
-    <p id="warning">VERGESST NICHT DAS RITALIN!</p>
+    <p id="warning">{{screamIt 'vergesst nicht das ritalin!'}}</p>
 
     <p>{{screamIt 'Scream this shit'}}</p>
 
     {{> footer}}
     <script type="text/javascript">
         const warning = document.querySelector('#warning');
-         console.log('## warning', warning);
+         console.warn('## warning', warning);
          setTimeout(() => {
             warning.style.color="red";
             warning.style.fontSize="30px";
